@@ -75,7 +75,7 @@ const Slider = ({
   function handleMouseDown(e) {
     if (disabled) return;
 
-    e.preventDefault();
+    // e.preventDefault();
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
     const dom = handle.current;
@@ -113,14 +113,14 @@ const Slider = ({
   function handleDrag(e) {
     if (disabled) return;
 
-    e.preventDefault();
+    // e.preventDefault();
     change(getPos(e));
   }
 
   function handleDragEnd(e) {
     if (disabled) return;
 
-    e.preventDefault();
+    // e.preventDefault();
     document.removeEventListener('mousemove', handleDrag);
     document.removeEventListener('mouseup', handleDragEnd);
 
@@ -138,7 +138,7 @@ const Slider = ({
   function handleTrackMouseDown(e) {
     if (disabled) return;
 
-    e.preventDefault();
+    // e.preventDefault();
     const clientPos = getClientPosition(e);
     const rect = container.current.getBoundingClientRect();
 
